@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head bgcolor='darkgrey'>
-	<title>Blog Posts App</title>
-	<h3><center><b>Minor Project 2 of BlogPosts App</center></h3></b>
-</head>
+{% extends 'base.html' %}
+{% block content %}
+
+
 <body>
 	<h3><center> Blogs <h3></center>
+<table>
+    <tr>
+      <center><a href="{% url 'add' %}"><center><b>Add New Blog</b></a>
+    </td>
+ </table><br><br>
 {% for blog in blog %}
 <center>
 <table style="width:70%"><center>
@@ -26,4 +29,5 @@
 <br><br><br>
 {% endfor %}
 </body>
-</html>
+
+{% endblock %}

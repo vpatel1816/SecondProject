@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br>
+<center>
+<form action="{% url 'add' %}" method = "POST" >
+{% csrf_token %}
+  <labe>Blog Title: </label><br>
+  <input type="text" name="blog_title" value="title"><br><br>
+
+  <label for="lname">Blog: </label><br>
+  <textarea rows="4" cols="50" name="blog" > Enter text here...</textarea><br><br>
+  
+  <label>Author: </label><br>
+  <input type="text" name="blog_author" value="Author"><br><br>
+  
+  <input type="submit" value="Submit">
+
+</form> 
+</center>
+
+{% endblock %}
