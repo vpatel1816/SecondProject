@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head bgcolor='darkgrey'>
+	<title>Blog Posts App</title>
+	<h3><center><b>Minor Project 2 of BlogPosts App</center></h3></b>
+</head>
+<body>
+	<h3><center> Blogs <h3></center>
+{% for blog in blog %}
+<center>
+<table style="width:70%"><center>
+<tr>
+    <td colspan="2" bgcolor="lightgrey"> Blog Title: {{ blog.blog_title }}</td>
+  </tr>
+  <tr>
+    <td colspan="2">{{ blog.blog }}</td>
+  </tr>
+  
+  <tr>
+    <td  bgcolor="lightgrey">{{ blog.blog_date }}</td>
+    <td  bgcolor="lightgrey">By, {{ blog.blog_author }}</td>
+  </tr>
+  
+</table>
+</center>
+<br><br><br>
+{% endfor %}
+</body>
+</html>
