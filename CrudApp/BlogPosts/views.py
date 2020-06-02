@@ -6,6 +6,16 @@ def home(request):
 	blog = Blogs.objects.all
 	return render(request,'BlogPosts/home.html', {'blog':blog})
 
+def edit(request, id):
+	blog = Blogs.objects.get(id=id)
+	return render(request, 'BlogPosts/home.html')
+
+def deletee(request, id):
+	blog = Blogs.objects.get(id=id)
+	blog.delete()
+	return render(request, 'BlogPosts/home.html')
+
+
 def add(request):
 	if request.method == 'POST':
 		blog_title 	= request.POST.get('blog_title')

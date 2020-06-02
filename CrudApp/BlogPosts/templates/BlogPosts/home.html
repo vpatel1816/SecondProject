@@ -4,9 +4,11 @@
 
 <body>
 	<h3><center> Blogs <h3></center>
-<table>
+<table border=1>
+<tr>
+	<table>
     <tr>
-      <center><a href="{% url 'add' %}"><center><b>Add New Blog</b></a>
+      <center><h2><a href="{% url 'add' %}"><center><b>Add New Blog</b></a></h2>
     </td>
  </table><br><br>
 {% for blog in blog %}
@@ -22,9 +24,22 @@
   <tr>
     <td  bgcolor="lightgrey">{{ blog.blog_date }}</td>
     <td  bgcolor="lightgrey">By, {{ blog.blog_author }}</td>
+    
   </tr>
-  
+  </table>
+  <table>
+  <tr>
+  	<td>
+  		<td><a href="'edit/{{ blog.id }}">Edit</td>
+  	</td>
+  	<td>
+  		<td><a href="'delete/{{ blog.id }}">Delete</td>
+  	</td>
+  </tr>
+ </table>
+</tr>
 </table>
+
 </center>
 <br><br><br>
 {% endfor %}
