@@ -12,8 +12,8 @@
   <label for="lname">Blog: </label><br>
   <textarea rows="4" cols="50" name="blog"  value=""> {{ blogs.blog }}</textarea><br><br>
   
-  <label>Author: </label><br>
-  <input type="text" name="blog_author" value="{{ blogs.blog_author }}"> <br><br>
+  <label>Author: {{ blogs.blog_author }} </label><br>
+  <label>Created on: {{ blogs.blog_date }} </label><br><br><br>
 
   
   <input type="submit" value="Submit">
