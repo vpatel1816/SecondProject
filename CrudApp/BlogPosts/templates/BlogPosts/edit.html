@@ -3,20 +3,20 @@
 <br><br><br>
 <center>
 
-<form action="{% url 'update/{{ blog.id }}' %}" method = "POST" >
+<form action="/update/{{blogs.id}}" method = "POST" >
 {% csrf_token %}
 
   <labe>Blog Title: </label><br>
-  <input type="text" name="blog_title" value="">{{ blog.blog_title }}<br><br>
+  <input type="text" name="blog_title" value="{{ blogs.blog_title }}"><br><br>
 
   <label for="lname">Blog: </label><br>
-  <textarea rows="4" cols="50" name="blog" > {{ blog.blog }}</textarea><br><br>
+  <textarea rows="4" cols="50" name="blog"  value=""> {{ blogs.blog }}</textarea><br><br>
   
   <label>Author: </label><br>
-  <input type="text" name="blog_author" value=""> {{ blog.blog_author }}<br><br>
+  <input type="text" name="blog_author" value="{{ blogs.blog_author }}"> <br><br>
+
   
   <input type="submit" value="Submit">
- 
 
 </form> 
 </center>
