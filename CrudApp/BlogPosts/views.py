@@ -6,17 +6,14 @@ def home(request):
 	blog = Blogs.objects.all
 	return render(request,'BlogPosts/home.html', {'blog':blog})
 
-
 def edit(request, id):
 	blogs = Blogs.objects.get(id=id)
 	return render(request,'BlogPosts/edit.html', {'blogs':blogs})
-
 
 def deletee(request, id):
 	blog = Blogs.objects.get(id=id)
 	blog.delete()
 	return redirect('/')
-
 
 def update(request, id):
 	if request.method == 'POST':
@@ -25,10 +22,9 @@ def update(request, id):
 		blogs.blog = request.POST.get('blog')
 		blogs.save()
 		return redirect('/')
+
 	else:
 		return redirect('/')
-
-
 
 def add(request):
 	if request.method == 'POST':
