@@ -7,7 +7,6 @@ class Blogs(models.Model):
 	blog_date = models.DateTimeField(('created'), auto_now_add=True, db_index=True, null=True)
 	blog = models.TextField(max_length=500)
 
-
 	def __str__(self):
 		return self.blog_title
 
